@@ -98,8 +98,8 @@ class Environment:
             (Optional[Any]): Value.
         """
         value = self.__getattr__(key=key)
-        return value if value else default
+        return value if value is not None else default
 
     @property
     def __version__(self) -> str:
-        return '1.1.0'
+        return '1.1.1'
